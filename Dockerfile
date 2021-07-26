@@ -2,13 +2,14 @@ FROM rust:1.53.0
 
 
 ENV NODE_VERSION=14.17.3
+ENV PATH="/root/.local/share/solana/install/active_release/bin:${PATH}"
+
 RUN apt-get update && \
     apt install -y curl
 
 RUN sh -c "$(curl -sSfL https://release.solana.com/v1.6.8/install)"
 
-RUN export PATH="/root/.local/share/solana/install/active_release/bin:$PATH" && \
-    solana config set --url https://api.devnet.solana.com
+RUN solana config set --url https://api.devnet.solana.com
 
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash

@@ -7,5 +7,6 @@ this dockerfile includes [solana-cli](https://docs.solana.com/cli/install-solana
     * node 14.17.3
 
 * v1.6.8
+* v1.6.25
 
 > **default solana config is `solana config set --url https://api.devnet.solana.com`**

@@ -7,7 +7,7 @@ ENV PATH="/root/.local/share/solana/install/active_release/bin:${PATH}"
 RUN apt-get update && \
     apt install -y curl
 
-RUN sh -c "$(curl -sSfL https://release.solana.com/v1.6.25/install)"
+RUN sh -c "$(curl -sSfL https://release.solana.com/v1.8.11/install)"
 
 RUN solana config set --url https://api.devnet.solana.com
 
